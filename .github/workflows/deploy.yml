@@ -47,7 +47,7 @@ jobs:
       id: github-cfn-glue-integ
       uses: aws-actions/aws-cloudformation-github-deploy@v1
       with:
-        name: ${{ steps.env-name.outputs.environment }}-infra
+        name: ${{ steps.env-name.outputs.environment }}-glue
         template: cloudformation/CFNGlueDatabase.yml
         role-arn: arn:aws:iam::${{ steps.creds.outputs.aws-account-id }}:role/MyDefaultGlueServiceRole
         no-fail-on-empty-changeset: "1"
