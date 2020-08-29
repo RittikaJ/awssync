@@ -49,5 +49,5 @@ jobs:
       with:
         name: ${{ steps.env-name.outputs.environment }}-infra
         template: cloudformation/CFNGlueDatabase.yml
-        role-arn: arn:aws:iam::${{ steps.creds.outputs.aws-account-id }}:role/github-actions-cloudformation-stack-role
+        role-arn: arn:aws:iam::${{ steps.creds.outputs.aws-account-id }}:role/MyDefaultGlueServiceRole
         no-fail-on-empty-changeset: "1"
